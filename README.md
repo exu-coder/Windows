@@ -1,19 +1,17 @@
-# Typing Master
+# Typing Master - 200 Lessons
 
 Build Speed. Build Accuracy. Build Muscle Memory.
 
-## How to build with GitHub Actions
+## How to use with GitHub
 
-1. Upload all these files to a new GitHub repository
-2. Go to the **Actions** tab
-3. Click **Build Typing Master** → **Run workflow**
-4. Or create a tag like `v1.0.0` and push it
+1. Create a new repository on GitHub
+2. Upload every file and folder from this package
+3. Open the Actions tab
+4. Select "Build Typing Master" and click Run workflow
+5. When finished, go to Releases and download the Windows installer
 
-After the build finishes, the Windows installer and Linux AppImage will appear in the **Releases** section.
+## What's included
 
-## Local development (optional)
-
-```bash
-npm install
-npm start
-```
+- 200 progressive typing lessons
+- Windows desktop app (Electron)
+- GitHub Actions automatic build
