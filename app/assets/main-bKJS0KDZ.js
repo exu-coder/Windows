@@ -1,7 +1,7 @@
-/* 𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑 - Typing Engine */
+/* 𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑 - Typing Engine v2 */
 class TypingEngine {
   constructor() {
-    this.text = '';
+    this.text = "";
     this.currentIndex = 0;
     this.errors = 0;
     this.startTime = null;
@@ -38,10 +38,11 @@ class TypingEngine {
     this.isRunning = true;
     this.isPaused = false;
     this.startTime = Date.now() - (this.elapsed * 1000);
-    this.timer = setInterval(() => {
-      this.elapsed = Math.floor((Date.now() - this.startTime) / 1000);
-      this.calculateWPM();
-      if (this.onProgress) this.onProgress(this.getStats());
+    var self = this;
+    this.timer = setInterval(function() {
+      self.elapsed = Math.floor((Date.now() - self.startTime) / 1000);
+      self.calculateWPM();
+      if (self.onProgress) self.onProgress(self.getStats());
     }, 1000);
   }
 
@@ -56,10 +57,11 @@ class TypingEngine {
     if (!this.isPaused) return;
     this.isPaused = false;
     this.startTime = Date.now() - (this.elapsed * 1000);
-    this.timer = setInterval(() => {
-      this.elapsed = Math.floor((Date.now() - this.startTime) / 1000);
-      this.calculateWPM();
-      if (this.onProgress) this.onProgress(this.getStats());
+    var self = this;
+    this.timer = setInterval(function() {
+      self.elapsed = Math.floor((Date.now() - self.startTime) / 1000);
+      self.calculateWPM();
+      if (self.onProgress) self.onProgress(self.getStats());
     }, 1000);
   }
 
@@ -73,8 +75,8 @@ class TypingEngine {
     if (!this.isRunning || this.isPaused) return { valid: false };
     if (this.currentIndex >= this.text.length) return { valid: false, complete: true };
 
-    const expected = this.text[this.currentIndex];
-    const isCorrect = char === expected;
+    var expected = this.text[this.currentIndex];
+    var isCorrect = char === expected;
 
     if (!isCorrect) {
       this.errors++;
@@ -85,12 +87,12 @@ class TypingEngine {
     this.calculateAccuracy();
     this.calculateWPM();
 
-    const complete = this.currentIndex >= this.text.length;
+    var complete = this.currentIndex >= this.text.length;
     if (complete && this.onComplete) {
       this.onComplete(this.getStats());
     }
 
-    return { valid: isCorrect, index: this.currentIndex - 1, complete, char: expected };
+    return { valid: isCorrect, index: this.currentIndex - 1, complete: complete, char: expected };
   }
 
   handleBackspace() {
@@ -101,8 +103,8 @@ class TypingEngine {
 
   calculateWPM() {
     if (!this.startTime || this.elapsed === 0) return;
-    const minutes = this.elapsed / 60;
-    const words = this.currentIndex / 5;
+    var minutes = this.elapsed / 60;
+    var words = this.currentIndex / 5;
     this.wpm = Math.round(words / minutes);
   }
 
@@ -153,7 +155,8 @@ class App {
       sound: true,
       showKeyboard: true,
       showFingers: true,
-      theme: 'dark'
+      showGlass: true,
+      theme: "dark"
     };
     this.achievements = [];
     this.unlockedAchievements = new Set();
@@ -172,33 +175,52 @@ class App {
 
   async loadData() {
     try {
-      const [lessonsRes, achievementsRes] = await Promise.all([
-        fetch('./data/lessons.json'),
-        fetch('./data/achievements.json')
-      ]);
+      var lessonsRes = await fetch("./data/lessons.json");
+      var achievementsRes = await fetch("./data/achievements.json");
       this.lessons = await lessonsRes.json();
       this.achievements = await achievementsRes.json();
     } catch (e) {
-      console.error('Failed to load data:', e);
+      console.error("Failed to load data:", e);
     }
   }
 
   loadProgress() {
-    const saved = localStorage.getItem('typing-master-progress');
-    if (saved) this.progress = JSON.parse(saved);
+    try {
+      var saved = localStorage.getItem("typing-master-progress-v2");
+      if (saved) this.progress = JSON.parse(saved);
+    } catch (e) {
+      this.progress = {};
+    }
   }
 
   saveProgress() {
-    localStorage.setItem('typing-master-progress', JSON.stringify(this.progress));
+    try {
+      localStorage.setItem("typing-master-progress-v2", JSON.stringify(this.progress));
+    } catch (e) {
+      console.error("Failed to save progress:", e);
+    }
   }
 
   loadSettings() {
-    const saved = localStorage.getItem('typing-master-settings');
-    if (saved) this.settings = JSON.parse(saved);
+    try {
+      var saved = localStorage.getItem("typing-master-settings-v2");
+      if (saved) {
+        var parsed = JSON.parse(saved);
+        for (var key in parsed) {
+          this.settings[key] = parsed[key];
+        }
+      }
+    } catch (e) {
+      console.error("Failed to load settings:", e);
+    }
   }
 
   saveSettings() {
-    localStorage.setItem('typing-master-settings', JSON.stringify(this.settings));
+    try {
+      localStorage.setItem("typing-master-settings-v2", JSON.stringify(this.settings));
+    } catch (e) {
+      console.error("Failed to save settings:", e);
+    }
   }
 
   getLessonStatus(lessonId) {
@@ -207,13 +229,13 @@ class App {
 
   isLessonUnlocked(lesson) {
     if (lesson.number === 1) return true;
-    const prev = this.lessons.find(l => l.number === lesson.number - 1);
+    var prev = this.lessons.find(function(l) { return l.number === lesson.number - 1; });
     if (!prev) return true;
     return this.getLessonStatus(prev.id).completed;
   }
 
   completeLesson(lessonId, stats) {
-    const current = this.getLessonStatus(lessonId);
+    var current = this.getLessonStatus(lessonId);
     this.progress[lessonId] = {
       completed: true,
       bestWpm: Math.max(current.bestWpm, stats.wpm),
@@ -222,208 +244,252 @@ class App {
     };
     this.saveProgress();
     this.checkAchievements();
-    this.showToast('Lesson completed!', 'success');
+    this.showToast("Lesson completed!", "success");
+    this.updateSidebarCount();
+  }
+
+  updateSidebarCount() {
+    var count = Object.values(this.progress).filter(function(p) { return p.completed; }).length;
+    var total = this.lessons.length;
+    var el = document.querySelector("[data-view=\'lessons\']");
+    if (el) {
+      var svg = el.querySelector("svg").outerHTML;
+      el.innerHTML = svg + "Lessons (" + count + "/" + total + ")";
+    }
   }
 
   checkAchievements() {
-    const completedCount = Object.values(this.progress).filter(p => p.completed).length;
-    const maxWpm = Math.max(...Object.values(this.progress).map(p => p.bestWpm), 0);
+    var completedCount = Object.values(this.progress).filter(function(p) { return p.completed; }).length;
+    var maxWpm = 0;
+    Object.values(this.progress).forEach(function(p) {
+      if (p.bestWpm > maxWpm) maxWpm = p.bestWpm;
+    });
 
-    const checks = [
-      { id: 'first-lesson', condition: completedCount >= 1 },
-      { id: 'lessons-10', condition: completedCount >= 10 },
-      { id: 'lessons-25', condition: completedCount >= 25 },
-      { id: 'lessons-50', condition: completedCount >= 50 },
-      { id: 'lessons-100', condition: completedCount >= 100 },
-      { id: 'wpm-50', condition: maxWpm >= 50 },
-      { id: 'wpm-60', condition: maxWpm >= 60 },
-      { id: 'wpm-80', condition: maxWpm >= 80 },
-      { id: 'wpm-100', condition: maxWpm >= 100 },
-      { id: 'complete-beginner', condition: completedCount >= 10 },
-      { id: 'master-typist', condition: completedCount >= 100 && maxWpm >= 60 }
+    var checks = [
+      { id: "first-lesson", condition: completedCount >= 1 },
+      { id: "lessons-10", condition: completedCount >= 10 },
+      { id: "lessons-25", condition: completedCount >= 25 },
+      { id: "lessons-50", condition: completedCount >= 50 },
+      { id: "lessons-100", condition: completedCount >= 100 },
+      { id: "wpm-50", condition: maxWpm >= 50 },
+      { id: "wpm-60", condition: maxWpm >= 60 },
+      { id: "wpm-80", condition: maxWpm >= 80 },
+      { id: "wpm-100", condition: maxWpm >= 100 },
+      { id: "complete-beginner", condition: completedCount >= 10 },
+      { id: "master-typist", condition: completedCount >= 100 && maxWpm >= 60 }
     ];
 
-    checks.forEach(check => {
-      if (check.condition && !this.unlockedAchievements.has(check.id)) {
-        this.unlockedAchievements.add(check.id);
-        const ach = this.achievements.find(a => a.id === check.id);
-        if (ach) this.showToast('Achievement: ' + ach.title, 'achievement');
+    var self = this;
+    checks.forEach(function(check) {
+      if (check.condition && !self.unlockedAchievements.has(check.id)) {
+        self.unlockedAchievements.add(check.id);
+        var ach = self.achievements.find(function(a) { return a.id === check.id; });
+        if (ach) self.showToast("Achievement: " + ach.title, "achievement");
       }
     });
   }
 
   renderSidebar() {
-    const app = document.getElementById('app');
+    var app = document.getElementById("app");
     if (!app) return;
 
-    const completedCount = Object.values(this.progress).filter(p => p.completed).length;
-    const totalLessons = this.lessons.length;
+    var completedCount = Object.values(this.progress).filter(function(p) { return p.completed; }).length;
+    var totalLessons = this.lessons.length;
 
-    const svgDashboard = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>';
-    const svgLessons = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>';
-    const svgPractice = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>';
-    const svgAchievements = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>';
-    const svgStats = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>';
-    const svgSettings = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
+    var svgDashboard = "<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><rect x=\'3\' y=\'3\' width=\'7\' height=\'7\'/><rect x=\'14\' y=\'3\' width=\'7\' height=\'7\'/><rect x=\'3\' y=\'14\' width=\'7\' height=\'7\'/><rect x=\'14\' y=\'14\' width=\'7\' height=\'7\'/></svg>";
+    var svgLessons = "<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><path d=\'M4 19.5A2.5 2.5 0 0 1 6.5 17H20\'/><path d=\'M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z\'/></svg>";
+    var svgPractice = "<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M12 6v6l4 2\'/></svg>";
+    var svgAchievements = "<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><circle cx=\'12\' cy=\'8\' r=\'7\'/><polyline points=\'8.21 13.89 7 23 12 20 17 23 15.79 13.88\'/></svg>";
+    var svgStats = "<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><line x1=\'18\' y1=\'20\' x2=\'18\' y2=\'10\'/><line x1=\'12\' y1=\'20\' x2=\'12\' y2=\'4\'/><line x1=\'6\' y1=\'20\' x2=\'6\' y2=\'14\'/></svg>";
+    var svgSettings = "<svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><circle cx=\'12\' cy=\'12\' r=\'3\'/><path d=\'M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z\'/></svg>";
 
-    app.innerHTML = '<aside class="sidebar">' +
-      '<div class="sidebar-brand"><img src="./images/logo.png" alt="Logo" /><h1>𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑</h1></div>' +
-      '<nav class="sidebar-nav">' +
-      '<button class="nav-item active" data-view="dashboard">' + svgDashboard + 'Dashboard</button>' +
-      '<button class="nav-item" data-view="lessons">' + svgLessons + 'Lessons (' + completedCount + '/' + totalLessons + ')</button>' +
-      '<button class="nav-item" data-view="practice">' + svgPractice + 'Practice</button>' +
-      '<button class="nav-item" data-view="achievements">' + svgAchievements + 'Achievements</button>' +
-      '<button class="nav-item" data-view="stats">' + svgStats + 'Statistics</button>' +
-      '<button class="nav-item" data-view="settings">' + svgSettings + 'Settings</button>' +
-      '</nav>' +
-      '<div class="sidebar-footer"><div>𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑 v1.0</div><div>Build Speed. Build Accuracy.</div></div>' +
-      '</aside>' +
-      '<main class="main">' +
-      '<header class="header"><div class="header-title" id="header-title">Dashboard</div><div class="header-actions"><button class="btn btn-ghost btn-sm" id="theme-toggle">🌙</button></div></header>' +
-      '<div class="content" id="content"></div>' +
-      '</main>' +
-      '<div class="toast-container" id="toast-container"></div>' +
-      '<div class="offline-badge" id="offline-badge">Offline Mode</div>';
+    app.innerHTML = "<aside class=\'sidebar\'>" +
+      "<div class=\'sidebar-brand\'><img src=\'./images/logo.png\' alt=\'Logo\' /><h1>𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑</h1></div>" +
+      "<nav class=\'sidebar-nav\'>" +
+      "<button class=\'nav-item active\' data-view=\'dashboard\'>" + svgDashboard + "Dashboard</button>" +
+      "<button class=\'nav-item\' data-view=\'lessons\'>" + svgLessons + "Lessons (" + completedCount + "/" + totalLessons + ")</button>" +
+      "<button class=\'nav-item\' data-view=\'practice\'>" + svgPractice + "Practice</button>" +
+      "<button class=\'nav-item\' data-view=\'achievements\'>" + svgAchievements + "Achievements</button>" +
+      "<button class=\'nav-item\' data-view=\'stats\'>" + svgStats + "Statistics</button>" +
+      "<button class=\'nav-item\' data-view=\'settings\'>" + svgSettings + "Settings</button>" +
+      "</nav>" +
+      "<div class=\'sidebar-footer\'><div>𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑 v1.0</div><div>Build Speed. Build Accuracy.</div></div>" +
+      "</aside>" +
+      "<main class=\'main\'>" +
+      "<header class=\'header\'><div class=\'header-title\' id=\'header-title\'>Dashboard</div><div class=\'header-actions\'><button class=\'btn btn-ghost btn-sm\' id=\'theme-toggle\'>🌙</button></div></header>" +
+      "<div class=\'content\' id=\'content\'></div>" +
+      "</main>" +
+      "<div class=\'toast-container\' id=\'toast-container\'></div>" +
+      "<div class=\'offline-badge\' id=\'offline-badge\'>Offline Mode</div>";
   }
 
   renderDashboard() {
-    const content = document.getElementById('content');
+    var content = document.getElementById("content");
     if (!content) return;
 
-    const completedCount = Object.values(this.progress).filter(p => p.completed).length;
-    const totalLessons = this.lessons.length;
-    const maxWpm = Math.max(...Object.values(this.progress).map(p => p.bestWpm), 0);
-    const avgAccuracy = completedCount > 0 ? Math.round(Object.values(this.progress).reduce((sum, p) => sum + p.bestAccuracy, 0) / completedCount) : 0;
-    const nextLesson = this.lessons.find(l => !this.getLessonStatus(l.id).completed) || this.lessons[0];
-    const progressPct = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
+    var completedCount = Object.values(this.progress).filter(function(p) { return p.completed; }).length;
+    var totalLessons = this.lessons.length;
+    var maxWpm = 0;
+    Object.values(this.progress).forEach(function(p) {
+      if (p.bestWpm > maxWpm) maxWpm = p.bestWpm;
+    });
+    var avgAccuracy = 0;
+    var completedList = Object.values(this.progress).filter(function(p) { return p.completed; });
+    if (completedList.length > 0) {
+      avgAccuracy = Math.round(completedList.reduce(function(sum, p) { return sum + p.bestAccuracy; }, 0) / completedList.length);
+    }
+    var nextLesson = this.lessons.find(function(l) { return !this.getLessonStatus(l.id).completed; }, this) || this.lessons[0];
+    var progressPct = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
 
-    content.innerHTML = '<div class="grid grid-4" style="margin-bottom:24px;">' +
-      '<div class="card"><div class="card-title">Lessons Completed</div><div class="card-value">' + completedCount + '/' + totalLessons + '</div></div>' +
-      '<div class="card"><div class="card-title">Best WPM</div><div class="card-value">' + maxWpm + '</div></div>' +
-      '<div class="card"><div class="card-title">Avg Accuracy</div><div class="card-value">' + avgAccuracy + '%</div></div>' +
-      '<div class="card"><div class="card-title">Achievements</div><div class="card-value">' + this.unlockedAchievements.size + '/' + this.achievements.length + '</div></div>' +
-      '</div>' +
-      '<div class="card" style="margin-bottom:24px;">' +
-      '<div class="card-title">Continue Learning</div>' +
-      '<h3 style="margin:8px 0;">Lesson ' + nextLesson.number + ': ' + nextLesson.title + '</h3>' +
-      '<p style="color:var(--text-muted);margin-bottom:16px;">' + nextLesson.description + '</p>' +
-      '<button class="btn btn-primary btn-lg" id="btn-continue">Continue</button>' +
-      '</div>' +
-      '<div class="card">' +
-      '<div class="card-title">Progress</div>' +
-      '<div class="progress-bar" style="margin-top:12px;"><div class="progress-bar-fill" style="width:' + progressPct + '%"></div></div>' +
-      '<p style="color:var(--text-muted);margin-top:8px;font-size:0.85rem;">' + progressPct + '% complete</p>' +
-      '</div>';
+    content.innerHTML = "<div class=\'grid grid-4\' style=\'margin-bottom:24px;\'>" +
+      "<div class=\'card\'><div class=\'card-title\'>Lessons Completed</div><div class=\'card-value\'>" + completedCount + "/" + totalLessons + "</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Best WPM</div><div class=\'card-value\'>" + maxWpm + "</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Avg Accuracy</div><div class=\'card-value\'>" + avgAccuracy + "%</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Achievements</div><div class=\'card-value\'>" + this.unlockedAchievements.size + "/" + this.achievements.length + "</div></div>" +
+      "</div>" +
+      "<div class=\'card\' style=\'margin-bottom:24px;\'>" +
+      "<div class=\'card-title\'>Continue Learning</div>" +
+      "<h3 style=\'margin:8px 0;\'>Lesson " + nextLesson.number + ": " + nextLesson.title + "</h3>" +
+      "<p style=\'color:rgba(255,255,255,0.5);margin-bottom:16px;\'>" + nextLesson.description + "</p>" +
+      "<button class=\'btn btn-primary btn-lg\' id=\'btn-continue\'>Continue</button>" +
+      "</div>" +
+      "<div class=\'card\'>" +
+      "<div class=\'card-title\'>Progress</div>" +
+      "<div class=\'progress-bar\' style=\'margin-top:12px;\'><div class=\'progress-bar-fill\' style=\'width:" + progressPct + "%\'></div></div>" +
+      "<p style=\'color:rgba(255,255,255,0.5);margin-top:8px;font-size:0.85rem;\'>" + progressPct + "% complete</p>" +
+      "</div>";
 
-    const self = this;
-    document.getElementById('btn-continue')?.addEventListener('click', function() {
+    var self = this;
+    document.getElementById("btn-continue")?.addEventListener("click", function() {
       self.startLesson(nextLesson.id);
     });
   }
 
   renderLessons() {
-    const content = document.getElementById('content');
+    var content = document.getElementById("content");
     if (!content) return;
 
-    const levels = {};
-    this.lessons.forEach(lesson => {
+    var levels = {};
+    this.lessons.forEach(function(lesson) {
       if (!levels[lesson.level]) levels[lesson.level] = [];
       levels[lesson.level].push(lesson);
     });
 
-    let html = '';
-    for (const level in levels) {
-      html += '<div class="level-header">' + level + '</div><div class="lesson-list">';
-      levels[level].forEach(lesson => {
-        const status = this.getLessonStatus(lesson.id);
-        const unlocked = this.isLessonUnlocked(lesson);
-        const className = status.completed ? 'completed' : (unlocked ? '' : 'locked');
-        const extra = status.completed ? ' (Best: ' + status.bestWpm + ' WPM, ' + status.bestAccuracy + '%)' : '';
-        html += '<div class="lesson-item ' + className + '" data-lesson="' + lesson.id + '">' +
-          '<div class="lesson-num">' + lesson.number + '</div>' +
-          '<div class="lesson-info"><h3>' + lesson.title + '</h3><p>' + lesson.description + extra + '</p></div>' +
-          '</div>';
-      });
-      html += '</div>';
+    var html = "";
+    for (var level in levels) {
+      html += "<div class=\'level-header\'>" + level + "</div><div class=\'lesson-list\'>";
+      levels[level].forEach(function(lesson) {
+        var status = this.getLessonStatus(lesson.id);
+        var unlocked = this.isLessonUnlocked(lesson);
+        var className = status.completed ? "completed" : (unlocked ? "" : "locked");
+        var extra = status.completed ? " (Best: " + status.bestWpm + " WPM, " + status.bestAccuracy + "%)" : "";
+        html += "<div class=\'lesson-item " + className + "\' data-lesson=\'" + lesson.id + "\'>" +
+          "<div class=\'lesson-num\'>" + lesson.number + "</div>" +
+          "<div class=\'lesson-info\'><h3>" + lesson.title + "</h3><p>" + lesson.description + extra + "</p></div>" +
+          "</div>";
+      }, this);
+      html += "</div>";
     }
 
     content.innerHTML = html;
 
-    const self = this;
-    content.querySelectorAll('.lesson-item:not(.locked)').forEach(item => {
-      item.addEventListener('click', function() {
-        const lessonId = parseInt(this.dataset.lesson);
+    var self = this;
+    content.querySelectorAll(".lesson-item:not(.locked)").forEach(function(item) {
+      item.addEventListener("click", function() {
+        var lessonId = parseInt(this.dataset.lesson);
         self.startLesson(lessonId);
       });
     });
   }
 
   startLesson(lessonId) {
-    const lesson = this.lessons.find(l => l.id === lessonId);
+    var lesson = this.lessons.find(function(l) { return l.id === lessonId; });
     if (!lesson) return;
 
     this.currentLesson = lesson;
     this.currentLessonIndex = this.lessons.indexOf(lesson);
-    const text = this.engine.loadLesson(lesson);
+    var text = this.engine.loadLesson(lesson);
 
-    const content = document.getElementById('content');
-    content.innerHTML = '<div class="typing-container">' +
-      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">' +
-      '<div><h2>Lesson ' + lesson.number + ': ' + lesson.title + '</h2><p style="color:var(--text-muted);font-size:0.9rem;">' + lesson.description + '</p></div>' +
-      '<button class="btn btn-secondary btn-sm" id="btn-back">← Back</button>' +
-      '</div>' +
-      '<div class="metrics-bar">' +
-      '<div class="metric"><div class="metric-label">WPM</div><div class="metric-value" id="metric-wpm">0</div></div>' +
-      '<div class="metric"><div class="metric-label">Accuracy</div><div class="metric-value" id="metric-accuracy">100%</div></div>' +
-      '<div class="metric"><div class="metric-label">Errors</div><div class="metric-value" id="metric-errors">0</div></div>' +
-      '<div class="metric"><div class="metric-label">Time</div><div class="metric-value" id="metric-time">0:00</div></div>' +
-      '<div class="metric"><div class="metric-label">Progress</div><div class="metric-value" id="metric-progress">0%</div></div>' +
-      '</div>' +
-      '<div class="typing-text" id="typing-text" tabindex="0">' + this.renderText(text) + '</div>' +
-      '<div style="text-align:center;margin:20px 0;"><button class="btn btn-primary btn-lg" id="btn-start">Start Lesson</button></div>' +
-      '<div class="finger-guide" id="finger-guide"></div>' +
-      (this.settings.showKeyboard ? this.renderKeyboard() : '') +
-      '</div>';
+    var content = document.getElementById("content");
+    content.innerHTML = "<div class=\'typing-container\'>" +
+      "<div style=\'display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;\'>" +
+      "<div><h2>Lesson " + lesson.number + ": " + lesson.title + "</h2><p style=\'color:rgba(255,255,255,0.5);font-size:0.9rem;\'>" + lesson.description + "</p></div>" +
+      "<button class=\'btn btn-secondary btn-sm\' id=\'btn-back\'>← Back</button>" +
+      "</div>" +
+      "<div class=\'metrics-bar\'>" +
+      "<div class=\'metric\'><div class=\'metric-label\'>WPM</div><div class=\'metric-value\' id=\'metric-wpm\'>0</div></div>" +
+      "<div class=\'metric\'><div class=\'metric-label\'>Accuracy</div><div class=\'metric-value\' id=\'metric-accuracy\'>100%</div></div>" +
+      "<div class=\'metric\'><div class=\'metric-label\'>Errors</div><div class=\'metric-value\' id=\'metric-errors\'>0</div></div>" +
+      "<div class=\'metric\'><div class=\'metric-label\'>Time</div><div class=\'metric-value\' id=\'metric-time\'>0:00</div></div>" +
+      "<div class=\'metric\'><div class=\'metric-label\'>Progress</div><div class=\'metric-value\' id=\'metric-progress\'>0%</div></div>" +
+      "</div>" +
+      "<div class=\'typing-text\' id=\'typing-text\' tabindex=\'0\'>" + this.renderText(text) + "</div>" +
+      "<div style=\'text-align:center;margin:20px 0;\'><button class=\'btn btn-primary btn-lg\' id=\'btn-start\'>Start Lesson (Press Enter)</button></div>" +
+      "<div class=\'finger-guide\' id=\'finger-guide\'></div>" +
+      (this.settings.showKeyboard ? this.renderKeyboard() : "") +
+      "</div>";
 
-    const typingText = document.getElementById('typing-text');
-    const startBtn = document.getElementById('btn-start');
-    const self = this;
+    var typingText = document.getElementById("typing-text");
+    var startBtn = document.getElementById("btn-start");
+    var self = this;
 
-    startBtn?.addEventListener('click', function() {
+    var doStart = function() {
       self.engine.start();
-      startBtn.style.display = 'none';
-      typingText.focus();
-    });
+      if (startBtn) startBtn.style.display = "none";
+      if (typingText) typingText.focus();
+    };
 
-    document.getElementById('btn-back')?.addEventListener('click', function() {
-      self.engine.stop();
-      self.renderLessons();
-    });
+    if (startBtn) {
+      startBtn.addEventListener("click", doStart);
+    }
 
-    typingText?.addEventListener('keydown', function(e) {
-      if (e.key === 'Backspace') {
-        e.preventDefault();
-        self.engine.handleBackspace();
-        self.updateDisplay();
-        return;
-      }
-      if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
-        e.preventDefault();
-        const result = self.engine.handleInput(e.key);
-        if (result.complete) {
-          self.completeLesson(lesson.id, self.engine.getStats());
-          self.showResult();
+    var backBtn = document.getElementById("btn-back");
+    if (backBtn) {
+      backBtn.addEventListener("click", function() {
+        self.engine.stop();
+        self.renderLessons();
+      });
+    }
+
+    if (typingText) {
+      typingText.addEventListener("keydown", function(e) {
+        if (e.key === "Enter" && !self.engine.getIsRunning()) {
+          e.preventDefault();
+          doStart();
+          return;
         }
-        self.updateDisplay();
-      }
-    });
+        if (e.key === "Backspace") {
+          e.preventDefault();
+          self.engine.handleBackspace();
+          self.updateDisplay();
+          return;
+        }
+        if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          if (!self.engine.getIsRunning()) {
+            doStart();
+          }
+          var result = self.engine.handleInput(e.key);
+          if (result.complete) {
+            self.completeLesson(lesson.id, self.engine.getStats());
+            self.showResult();
+          }
+          self.updateDisplay();
+        }
+      });
+    }
 
     this.engine.onProgress = function(stats) {
-      document.getElementById('metric-wpm').textContent = stats.wpm;
-      document.getElementById('metric-accuracy').textContent = stats.accuracy + '%';
-      document.getElementById('metric-errors').textContent = stats.errors;
-      document.getElementById('metric-time').textContent = self.formatTime(stats.elapsed);
-      document.getElementById('metric-progress').textContent = stats.progress + '%';
+      var wpmEl = document.getElementById("metric-wpm");
+      var accEl = document.getElementById("metric-accuracy");
+      var errEl = document.getElementById("metric-errors");
+      var timeEl = document.getElementById("metric-time");
+      var progEl = document.getElementById("metric-progress");
+      if (wpmEl) wpmEl.textContent = stats.wpm;
+      if (accEl) accEl.textContent = stats.accuracy + "%";
+      if (errEl) errEl.textContent = stats.errors;
+      if (timeEl) timeEl.textContent = self.formatTime(stats.elapsed);
+      if (progEl) progEl.textContent = stats.progress + "%";
     };
 
     this.engine.onComplete = function(stats) {
@@ -432,244 +498,300 @@ class App {
   }
 
   renderText(text) {
-    let html = '';
-    for (let i = 0; i < text.length; i++) {
-      const char = text[i];
-      const display = char === ' ' ? '&middot;' : char;
-      html += '<span class="char pending" data-index="' + i + '">' + display + '</span>';
+    var html = "";
+    for (var i = 0; i < text.length; i++) {
+      var char = text[i];
+      var display = char === " " ? "&middot;" : char;
+      html += "<span class=\'char pending\' data-index=\'" + i + "\'>" + display + "</span>";
     }
     return html;
   }
 
   updateDisplay() {
-    const text = this.engine.getText();
-    const currentIndex = this.engine.getCurrentIndex();
-    const chars = document.querySelectorAll('.typing-text .char');
+    var text = this.engine.getText();
+    var currentIndex = this.engine.getCurrentIndex();
+    var chars = document.querySelectorAll(".typing-text .char");
 
-    chars.forEach((span, i) => {
-      span.className = 'char';
+    chars.forEach(function(span, i) {
+      span.className = "char";
       if (i < currentIndex) {
-        span.classList.add('correct');
+        span.classList.add("correct");
       } else if (i === currentIndex) {
-        span.classList.add('current');
+        span.classList.add("current");
       } else {
-        span.classList.add('pending');
+        span.classList.add("pending");
       }
     });
 
-    const currentChar = text[currentIndex];
+    var currentChar = text[currentIndex];
     if (currentChar) {
-      const guide = document.getElementById('finger-guide');
+      var guide = document.getElementById("finger-guide");
       if (guide) {
-        const finger = this.getFingerForKey(currentChar);
-        guide.innerHTML = finger ? 'Use your <strong>' + finger + '</strong> finger' : '';
+        var finger = this.getFingerForKey(currentChar);
+        guide.innerHTML = finger ? "Use your <strong>" + finger + "</strong> finger" : "";
       }
 
-      document.querySelectorAll('.kb-key').forEach(key => {
-        key.classList.remove('current');
+      document.querySelectorAll(".kb-key").forEach(function(key) {
+        key.classList.remove("current");
         if (key.dataset.key === currentChar.toLowerCase()) {
-          key.classList.add('current');
+          key.classList.add("current");
         }
       });
     }
   }
 
   getFingerForKey(key) {
-    const map = {
-      'a': 'left pinky', 'q': 'left pinky', 'z': 'left pinky', '1': 'left pinky',
-      's': 'left ring', 'w': 'left ring', 'x': 'left ring', '2': 'left ring',
-      'd': 'left middle', 'e': 'left middle', 'c': 'left middle', '3': 'left middle',
-      'f': 'left index', 'r': 'left index', 'v': 'left index', 't': 'left index', 'g': 'left index', 'b': 'left index', '4': 'left index', '5': 'left index',
-      'j': 'right index', 'h': 'right index', 'n': 'right index', 'm': 'right index', 'y': 'right index', 'u': 'right index', '6': 'right index', '7': 'right index',
-      'k': 'right middle', 'i': 'right middle', ',': 'right middle', '8': 'right middle',
-      'l': 'right ring', 'o': 'right ring', '.': 'right ring', '9': 'right ring',
-      ';': 'right pinky', 'p': 'right pinky', '/': 'right pinky', "'": 'right pinky', '0': 'right pinky', '-': 'right pinky', '=': 'right pinky',
-      ' ': 'thumb'
+    var map = {
+      "a": "left pinky", "q": "left pinky", "z": "left pinky", "1": "left pinky",
+      "s": "left ring", "w": "left ring", "x": "left ring", "2": "left ring",
+      "d": "left middle", "e": "left middle", "c": "left middle", "3": "left middle",
+      "f": "left index", "r": "left index", "v": "left index", "t": "left index", "g": "left index", "b": "left index", "4": "left index", "5": "left index",
+      "j": "right index", "h": "right index", "n": "right index", "m": "right index", "y": "right index", "u": "right index", "6": "right index", "7": "right index",
+      "k": "right middle", "i": "right middle", ",": "right middle", "8": "right middle",
+      "l": "right ring", "o": "right ring", ".": "right ring", "9": "right ring",
+      ";": "right pinky", "p": "right pinky", "/": "right pinky", "\'": "right pinky", "0": "right pinky", "-": "right pinky", "=": "right pinky",
+      " ": "thumb"
     };
-    return map[key.toLowerCase()] || '';
+    return map[key.toLowerCase()] || "";
   }
 
   renderKeyboard() {
-    const rows = [
-      ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'],
-      ['Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\\'],
-      ['Caps', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', "'", 'Enter'],
-      ['Shift', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 'Shift'],
-      ['Ctrl', 'Win', 'Alt', 'Space', 'Alt', 'Fn', 'Ctrl']
+    var rows = [
+      ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace"],
+      ["Tab", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "\\"],
+      ["Caps", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "\'", "Enter"],
+      ["Shift", "z", "x", "c", "v", "b", "n", "m", ",", ".", "/", "Shift"],
+      ["Ctrl", "Win", "Alt", "Space", "Alt", "Fn", "Ctrl"]
     ];
 
-    let html = '<div class="keyboard">';
-    rows.forEach(row => {
-      html += '<div class="kb-row">';
-      row.forEach(key => {
-        let cls = 'kb-key';
-        if (['Backspace','Tab','Caps','Enter','Shift','Ctrl','Win','Alt','Fn'].indexOf(key) !== -1) cls += ' wide';
-        if (key === 'Space') cls += ' space';
-        html += '<div class="' + cls + '" data-key="' + key.toLowerCase() + '">' + key + '</div>';
+    var html = "<div class=\'keyboard\'>";
+    rows.forEach(function(row) {
+      html += "<div class=\'kb-row\'>";
+      row.forEach(function(key) {
+        var cls = "kb-key";
+        var wideKeys = ["Backspace", "Tab", "Caps", "Enter", "Shift", "Ctrl", "Win", "Alt", "Fn"];
+        if (wideKeys.indexOf(key) !== -1) cls += " wide";
+        if (key === "Space") cls += " space";
+        html += "<div class=\'" + cls + "\' data-key=\'" + key.toLowerCase() + "\'>" + key + "</div>";
       });
-      html += '</div>';
+      html += "</div>";
     });
-    html += '</div>';
+    html += "</div>";
     return html;
   }
 
   showResult() {
-    const stats = this.engine.getStats();
-    const lesson = this.currentLesson;
-    const content = document.getElementById('content');
+    var stats = this.engine.getStats();
+    var lesson = this.currentLesson;
+    var content = document.getElementById("content");
 
-    const passed = stats.accuracy >= (lesson.requirements.accuracy || 90) &&
-                   (!lesson.requirements.targetWpm || stats.wpm >= lesson.requirements.targetWpm);
+    var passed = stats.accuracy >= (lesson.requirements.accuracy || 90) &&
+                 (!lesson.requirements.targetWpm || stats.wpm >= lesson.requirements.targetWpm);
 
-    const nextBtn = passed ? '<button class="btn btn-primary btn-lg" id="btn-next">Next Lesson →</button>' : '<button class="btn btn-primary btn-lg" id="btn-retry">Retry Lesson ↻</button>';
+    var nextBtn = passed ?
+      "<button class=\'btn btn-primary btn-lg\' id=\'btn-next\'>Next Lesson →</button>" :
+      "<button class=\'btn btn-primary btn-lg\' id=\'btn-retry\'>Retry Lesson ↻</button>";
 
-    content.innerHTML = '<div class="result-screen">' +
-      '<h2>' + (passed ? '🎉 Lesson Complete!' : '⚠️ Try Again') + '</h2>' +
-      '<div class="result-stats">' +
-      '<div class="result-stat"><div class="val">' + stats.wpm + '</div><div class="lbl">WPM</div></div>' +
-      '<div class="result-stat"><div class="val">' + stats.accuracy + '%</div><div class="lbl">Accuracy</div></div>' +
-      '<div class="result-stat"><div class="val">' + stats.errors + '</div><div class="lbl">Errors</div></div>' +
-      '<div class="result-stat"><div class="val">' + this.formatTime(stats.elapsed) + '</div><div class="lbl">Time</div></div>' +
-      '</div>' + nextBtn +
-      '<button class="btn btn-secondary" id="btn-menu" style="margin-top:12px;">Back to Lessons</button>' +
-      '</div>';
+    content.innerHTML = "<div class=\'result-screen\'>" +
+      "<h2>" + (passed ? "🎉 Lesson Complete!" : "⚠️ Try Again") + "</h2>" +
+      "<div class=\'result-stats\'>" +
+      "<div class=\'result-stat\'><div class=\'val\'>" + stats.wpm + "</div><div class=\'lbl\'>WPM</div></div>" +
+      "<div class=\'result-stat\'><div class=\'val\'>" + stats.accuracy + "%</div><div class=\'lbl\'>Accuracy</div></div>" +
+      "<div class=\'result-stat\'><div class=\'val\'>" + stats.errors + "</div><div class=\'lbl\'>Errors</div></div>" +
+      "<div class=\'result-stat\'><div class=\'val\'>" + this.formatTime(stats.elapsed) + "</div><div class=\'lbl\'>Time</div></div>" +
+      "</div>" + nextBtn +
+      "<button class=\'btn btn-secondary\' id=\'btn-menu\' style=\'margin-top:12px;\'>Back to Lessons</button>" +
+      "</div>";
 
-    const self = this;
-    document.getElementById('btn-next')?.addEventListener('click', function() {
-      const next = self.lessons[self.currentLessonIndex + 1];
-      if (next) self.startLesson(next.id);
-      else self.renderDashboard();
-    });
+    var self = this;
+    var nextBtnEl = document.getElementById("btn-next");
+    if (nextBtnEl) {
+      nextBtnEl.addEventListener("click", function() {
+        var next = self.lessons[self.currentLessonIndex + 1];
+        if (next) self.startLesson(next.id);
+        else self.renderDashboard();
+      });
+    }
 
-    document.getElementById('btn-retry')?.addEventListener('click', function() {
-      self.startLesson(lesson.id);
-    });
+    var retryBtnEl = document.getElementById("btn-retry");
+    if (retryBtnEl) {
+      retryBtnEl.addEventListener("click", function() {
+        self.startLesson(lesson.id);
+      });
+    }
 
-    document.getElementById('btn-menu')?.addEventListener('click', function() {
-      self.renderLessons();
-    });
+    var menuBtnEl = document.getElementById("btn-menu");
+    if (menuBtnEl) {
+      menuBtnEl.addEventListener("click", function() {
+        self.renderLessons();
+      });
+    }
   }
 
   renderPractice() {
-    const content = document.getElementById('content');
-    content.innerHTML = '<div class="typing-container"><h2>Free Practice</h2><p style="color:var(--text-muted);margin-bottom:20px;">Type anything. No scoring, just practice.</p><div class="typing-text" id="practice-text" contenteditable="true" style="min-height:200px;outline:none;"></div></div>';
+    var content = document.getElementById("content");
+    content.innerHTML = "<div class=\'typing-container\'><h2>Free Practice</h2><p style=\'color:rgba(255,255,255,0.5);margin-bottom:20px;\'>Type anything. No scoring, just practice.</p><div class=\'typing-text\' id=\'practice-text\' contenteditable=\'true\' style=\'min-height:200px;outline:none;\'></div></div>";
   }
 
   renderAchievements() {
-    const content = document.getElementById('content');
-    let html = '<h2>Achievements</h2><div class="achievement-grid">';
-    this.achievements.forEach(ach => {
-      const unlocked = this.unlockedAchievements.has(ach.id);
-      html += '<div class="achievement-card ' + (unlocked ? 'unlocked' : 'locked') + '"><div class="icon">' + ach.icon + '</div><h4>' + ach.title + '</h4><p>' + ach.description + '</p></div>';
-    });
-    html += '</div>';
+    var content = document.getElementById("content");
+    var html = "<h2>Achievements</h2><div class=\'achievement-grid\'>";
+    this.achievements.forEach(function(ach) {
+      var unlocked = this.unlockedAchievements.has(ach.id);
+      html += "<div class=\'achievement-card " + (unlocked ? "unlocked" : "locked") + "\'><div class=\'icon\'>" + ach.icon + "</div><h4>" + ach.title + "</h4><p>" + ach.description + "</p></div>";
+    }, this);
+    html += "</div>";
     content.innerHTML = html;
   }
 
   renderStats() {
-    const content = document.getElementById('content');
-    const completed = Object.values(this.progress).filter(p => p.completed);
-    const maxWpm = Math.max(...completed.map(p => p.bestWpm), 0);
-    const avgWpm = completed.length > 0 ? Math.round(completed.reduce((s, p) => s + p.bestWpm, 0) / completed.length) : 0;
-    const avgAcc = completed.length > 0 ? Math.round(completed.reduce((s, p) => s + p.bestAccuracy, 0) / completed.length) : 0;
+    var content = document.getElementById("content");
+    var completed = Object.values(this.progress).filter(function(p) { return p.completed; });
+    var maxWpm = 0;
+    completed.forEach(function(p) { if (p.bestWpm > maxWpm) maxWpm = p.bestWpm; });
+    var avgWpm = completed.length > 0 ? Math.round(completed.reduce(function(s, p) { return s + p.bestWpm; }, 0) / completed.length) : 0;
+    var avgAcc = completed.length > 0 ? Math.round(completed.reduce(function(s, p) { return s + p.bestAccuracy; }, 0) / completed.length) : 0;
 
-    content.innerHTML = '<h2>Statistics</h2><div class="grid grid-2" style="margin-top:20px;">' +
-      '<div class="card"><div class="card-title">Total Practice Time</div><div class="card-value">' + this.formatTime(completed.length * 120) + '</div></div>' +
-      '<div class="card"><div class="card-title">Lessons Completed</div><div class="card-value">' + completed.length + '</div></div>' +
-      '<div class="card"><div class="card-title">Average WPM</div><div class="card-value">' + avgWpm + '</div></div>' +
-      '<div class="card"><div class="card-title">Average Accuracy</div><div class="card-value">' + avgAcc + '%</div></div>' +
-      '<div class="card"><div class="card-title">Best WPM</div><div class="card-value">' + maxWpm + '</div></div>' +
-      '<div class="card"><div class="card-title">Total Characters</div><div class="card-value">' + (completed.length * 500) + '</div></div>' +
-      '</div>';
+    content.innerHTML = "<h2>Statistics</h2><div class=\'grid grid-2\' style=\'margin-top:20px;\'>" +
+      "<div class=\'card\'><div class=\'card-title\'>Total Practice Time</div><div class=\'card-value\'>" + this.formatTime(completed.length * 120) + "</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Lessons Completed</div><div class=\'card-value\'>" + completed.length + "</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Average WPM</div><div class=\'card-value\'>" + avgWpm + "</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Average Accuracy</div><div class=\'card-value\'>" + avgAcc + "%</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Best WPM</div><div class=\'card-value\'>" + maxWpm + "</div></div>" +
+      "<div class=\'card\'><div class=\'card-title\'>Total Characters</div><div class=\'card-value\'>" + (completed.length * 500) + "</div></div>" +
+      "</div>";
   }
 
   renderSettings() {
-    const content = document.getElementById('content');
-    content.innerHTML = '<h2>Settings</h2><div style="max-width:500px;margin-top:20px;">' +
-      '<div class="settings-group"><h3>General</h3>' +
-      '<div class="setting-row"><label>Sound Effects</label><div class="toggle ' + (this.settings.sound ? 'on' : '') + '" id="toggle-sound"></div></div>' +
-      '<div class="setting-row"><label>Show Keyboard</label><div class="toggle ' + (this.settings.showKeyboard ? 'on' : '') + '" id="toggle-keyboard"></div></div>' +
-      '<div class="setting-row"><label>Show Finger Guide</label><div class="toggle ' + (this.settings.showFingers ? 'on' : '') + '" id="toggle-fingers"></div></div>' +
-      '</div>' +
-      '<div class="settings-group"><h3>Data</h3><button class="btn btn-secondary" id="btn-reset">Reset All Progress</button></div>' +
-      '</div>';
+    var content = document.getElementById("content");
+    content.innerHTML = "<h2>Settings</h2><div style=\'max-width:500px;margin-top:20px;\'>" +
+      "<div class=\'settings-group\'><h3>General</h3>" +
+      "<div class=\'setting-row\'><label>Sound Effects</label><div class=\'toggle " + (this.settings.sound ? "on" : "") + "\' id=\'toggle-sound\'></div></div>" +
+      "<div class=\'setting-row\'><label>Show Keyboard</label><div class=\'toggle " + (this.settings.showKeyboard ? "on" : "") + "\' id=\'toggle-keyboard\'></div></div>" +
+      "<div class=\'setting-row\'><label>Show Finger Guide</label><div class=\'toggle " + (this.settings.showFingers ? "on" : "") + "\' id=\'toggle-fingers\'></div></div>" +
+      "</div>" +
+      "<div class=\'settings-group\'><h3>Appearance</h3>" +
+      "<div class=\'setting-row\'><label>Liquid Glass Effect</label><div class=\'toggle " + (this.settings.showGlass ? "on" : "") + "\' id=\'toggle-glass\'></div></div>" +
+      "</div>" +
+      "<div class=\'settings-group\'><h3>Data</h3><button class=\'btn btn-secondary\' id=\'btn-reset\'>Reset All Progress</button></div>" +
+      "</div>";
 
-    const self = this;
-    document.getElementById('toggle-sound')?.addEventListener('click', function(e) {
-      self.settings.sound = !self.settings.sound;
-      e.target.classList.toggle('on');
-      self.saveSettings();
-    });
+    var self = this;
 
-    document.getElementById('toggle-keyboard')?.addEventListener('click', function(e) {
-      self.settings.showKeyboard = !self.settings.showKeyboard;
-      e.target.classList.toggle('on');
-      self.saveSettings();
-    });
+    var soundToggle = document.getElementById("toggle-sound");
+    if (soundToggle) {
+      soundToggle.addEventListener("click", function(e) {
+        self.settings.sound = !self.settings.sound;
+        e.target.classList.toggle("on");
+        self.saveSettings();
+      });
+    }
 
-    document.getElementById('toggle-fingers')?.addEventListener('click', function(e) {
-      self.settings.showFingers = !self.settings.showFingers;
-      e.target.classList.toggle('on');
-      self.saveSettings();
-    });
+    var kbToggle = document.getElementById("toggle-keyboard");
+    if (kbToggle) {
+      kbToggle.addEventListener("click", function(e) {
+        self.settings.showKeyboard = !self.settings.showKeyboard;
+        e.target.classList.toggle("on");
+        self.saveSettings();
+      });
+    }
 
-    document.getElementById('btn-reset')?.addEventListener('click', function() {
-      if (confirm('Are you sure? This will delete all your progress.')) {
-        self.progress = {};
-        self.saveProgress();
-        self.renderDashboard();
+    var fingerToggle = document.getElementById("toggle-fingers");
+    if (fingerToggle) {
+      fingerToggle.addEventListener("click", function(e) {
+        self.settings.showFingers = !self.settings.showFingers;
+        e.target.classList.toggle("on");
+        self.saveSettings();
+      });
+    }
+
+    var glassToggle = document.getElementById("toggle-glass");
+    if (glassToggle) {
+      glassToggle.addEventListener("click", function(e) {
+        self.settings.showGlass = !self.settings.showGlass;
+        e.target.classList.toggle("on");
+        self.saveSettings();
+        self.applyGlassEffect();
+      });
+    }
+
+    var resetBtn = document.getElementById("btn-reset");
+    if (resetBtn) {
+      resetBtn.addEventListener("click", function() {
+        if (confirm("Are you sure? This will delete all your progress.")) {
+          self.progress = {};
+          self.saveProgress();
+          self.renderDashboard();
+        }
+      });
+    }
+  }
+
+  applyGlassEffect() {
+    var cards = document.querySelectorAll(".card, .lesson-item, .typing-text, .kb-key, .result-stat, .achievement-card");
+    cards.forEach(function(el) {
+      if (this.settings.showGlass) {
+        el.style.backdropFilter = "blur(24px)";
+        el.style.webkitBackdropFilter = "blur(24px)";
+      } else {
+        el.style.backdropFilter = "none";
+        el.style.webkitBackdropFilter = "none";
+        el.style.background = "rgba(255,255,255,0.06)";
       }
-    });
+    }, this);
   }
 
   setupEventListeners() {
-    const self = this;
-    document.querySelectorAll('.nav-item').forEach(item => {
-      item.addEventListener('click', function() {
-        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-        this.classList.add('active');
-        const view = this.dataset.view;
-        document.getElementById('header-title').textContent = view.charAt(0).toUpperCase() + view.slice(1);
+    var self = this;
+    document.querySelectorAll(".nav-item").forEach(function(item) {
+      item.addEventListener("click", function() {
+        document.querySelectorAll(".nav-item").forEach(function(n) { n.classList.remove("active"); });
+        this.classList.add("active");
+        var view = this.dataset.view;
+        document.getElementById("header-title").textContent = view.charAt(0).toUpperCase() + view.slice(1);
         switch (view) {
-          case 'dashboard': self.renderDashboard(); break;
-          case 'lessons': self.renderLessons(); break;
-          case 'practice': self.renderPractice(); break;
-          case 'achievements': self.renderAchievements(); break;
-          case 'stats': self.renderStats(); break;
-          case 'settings': self.renderSettings(); break;
+          case "dashboard": self.renderDashboard(); break;
+          case "lessons": self.renderLessons(); break;
+          case "practice": self.renderPractice(); break;
+          case "achievements": self.renderAchievements(); break;
+          case "stats": self.renderStats(); break;
+          case "settings": self.renderSettings(); break;
         }
       });
     });
 
-    document.getElementById('theme-toggle')?.addEventListener('click', function() {
-      document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
-    });
+    var themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) {
+      themeBtn.addEventListener("click", function() {
+        document.body.dataset.theme = document.body.dataset.theme === "light" ? "dark" : "light";
+      });
+    }
   }
 
   showToast(message, type) {
-    type = type || 'success';
-    const container = document.getElementById('toast-container');
+    type = type || "success";
+    var container = document.getElementById("toast-container");
     if (!container) return;
-    const toast = document.createElement('div');
-    toast.className = 'toast ' + type;
+    var toast = document.createElement("div");
+    toast.className = "toast " + type;
     toast.textContent = message;
     container.appendChild(toast);
     setTimeout(function() { toast.remove(); }, 3000);
   }
 
   formatTime(seconds) {
-    const m = Math.floor(seconds / 60);
-    const s = seconds % 60;
-    return m + ':' + (s < 10 ? '0' : '') + s;
+    var m = Math.floor(seconds / 60);
+    var s = seconds % 60;
+    return m + ":" + (s < 10 ? "0" : "") + s;
   }
 
   checkOffline() {
-    const badge = document.getElementById('offline-badge');
-    const update = function() {
-      if (badge) badge.classList.toggle('show', !navigator.onLine);
+    var badge = document.getElementById("offline-badge");
+    var update = function() {
+      if (badge) badge.classList.toggle("show", !navigator.onLine);
     };
-    window.addEventListener('online', update);
-    window.addEventListener('offline', update);
+    window.addEventListener("online", update);
+    window.addEventListener("offline", update);
     update();
   }
 }
