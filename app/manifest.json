@@ -1,11 +1,11 @@
 {
-  "name": "Typing Master",
-  "short_name": "Typing Master",
+  "name": "𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑",
+  "short_name": "𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑",
   "description": "Build Speed. Build Accuracy. Build Muscle Memory. Professional touch typing tutor.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#05050a",
+  "theme_color": "#05050a",
   "orientation": "any",
   "icons": [
     {
@@ -27,6 +27,9 @@
       "purpose": "any"
     }
   ],
-  "categories": ["education", "productivity"],
+  "categories": [
+    "education",
+    "productivity"
+  ],
   "lang": "en"
 }
