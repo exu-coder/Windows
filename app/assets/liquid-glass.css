@@ -62,7 +62,10 @@ body::before {
   display: flex; align-items: center; gap: 12px;
   padding: 20px; border-bottom: 1px solid var(--glass-border);
 }
-.sidebar-brand img, .sidebar-brand svg { width: 40px; height: 40px; border-radius: 10px; }
+.sidebar-brand img, .sidebar-brand svg {
+  width: 40px; height: 40px; border-radius: 10px;
+  object-fit: cover;
+}
 .sidebar-brand h1 {
   font-size: 1.15rem; font-weight: 700; letter-spacing: -0.03em;
   background: linear-gradient(135deg, #fff 0%, #bf5af2 100%);
