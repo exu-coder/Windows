@@ -1,14 +1,21 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
+const gotTheLock = app.requestSingleInstanceLock();
+
+if (!gotTheLock) {
+  app.quit();
+  return;
+}
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1280,
     height: 800,
     minWidth: 900,
     minHeight: 600,
-    title: 'Typing Master',
-    backgroundColor: '#0f172a',
+    title: '𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑',
+    backgroundColor: '#05050a',
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false
@@ -27,4 +34,16 @@ function createWindow() {
 }
 
 app.whenReady().then(createWindow);
-app.on('window-all-closed', () => { if (process.platform !== 'darwin') app.quit(); });
+
+app.on('second-instance', () => {
+  const win = BrowserWindow.getAllWindows()[0];
+  if (win) {
+    if (win.isMinimized()) win.restore();
+    win.focus();
+    win.show();
+  }
+});
+
+app.on('window-all-closed', () => {
+  app.quit();
+});
