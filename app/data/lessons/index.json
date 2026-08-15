@@ -1,0 +1,123 @@
+{
+  "totalParts": 13,
+  "totalLessons": 200,
+  "parts": [
+    {
+      "part": 1,
+      "file": "lesson-01-foundation.json",
+      "title": "Level 1 \u2014 Foundation",
+      "level": "Foundation",
+      "lessonCount": 10,
+      "firstId": 1,
+      "lastId": 10
+    },
+    {
+      "part": 2,
+      "file": "lesson-02-basic-letters.json",
+      "title": "Level 2 \u2014 Basic Letters",
+      "level": "Basic Letters",
+      "lessonCount": 15,
+      "firstId": 11,
+      "lastId": 25
+    },
+    {
+      "part": 3,
+      "file": "lesson-03-complete-alphabet.json",
+      "title": "Level 3 \u2014 Complete Alphabet",
+      "level": "Complete Alphabet",
+      "lessonCount": 15,
+      "firstId": 26,
+      "lastId": 40
+    },
+    {
+      "part": 4,
+      "file": "lesson-04-common-words.json",
+      "title": "Level 4 \u2014 Common Words",
+      "level": "Common Words",
+      "lessonCount": 15,
+      "firstId": 41,
+      "lastId": 55
+    },
+    {
+      "part": 5,
+      "file": "lesson-05-sentences.json",
+      "title": "Level 5 \u2014 Sentences",
+      "level": "Sentences",
+      "lessonCount": 10,
+      "firstId": 56,
+      "lastId": 65
+    },
+    {
+      "part": 6,
+      "file": "lesson-06-shift-training.json",
+      "title": "Level 6 \u2014 Shift Training",
+      "level": "Shift Training",
+      "lessonCount": 10,
+      "firstId": 66,
+      "lastId": 75
+    },
+    {
+      "part": 7,
+      "file": "lesson-07-number-row.json",
+      "title": "Level 7 \u2014 Number Row",
+      "level": "Number Row",
+      "lessonCount": 10,
+      "firstId": 76,
+      "lastId": 85
+    },
+    {
+      "part": 8,
+      "file": "lesson-08-symbols.json",
+      "title": "Level 8 \u2014 Symbols",
+      "level": "Symbols",
+      "lessonCount": 15,
+      "firstId": 86,
+      "lastId": 100
+    },
+    {
+      "part": 9,
+      "file": "lesson-09-advanced-combinations.json",
+      "title": "Level 9 \u2014 Advanced Combinations",
+      "level": "Advanced Combinations",
+      "lessonCount": 10,
+      "firstId": 101,
+      "lastId": 110
+    },
+    {
+      "part": 10,
+      "file": "lesson-10-real-world.json",
+      "title": "Level 10 \u2014 Real-World Typing",
+      "level": "Real-World Typing",
+      "lessonCount": 15,
+      "firstId": 111,
+      "lastId": 125
+    },
+    {
+      "part": 11,
+      "file": "lesson-11-advanced-speed.json",
+      "title": "Level 11 \u2014 Advanced Speed",
+      "level": "Advanced Speed",
+      "lessonCount": 25,
+      "firstId": 126,
+      "lastId": 150
+    },
+    {
+      "part": 12,
+      "file": "lesson-12-professional.json",
+      "title": "Level 12 \u2014 Professional Text",
+      "level": "Professional Text",
+      "lessonCount": 25,
+      "firstId": 151,
+      "lastId": 175
+    },
+    {
+      "part": 13,
+      "file": "lesson-13-mastery.json",
+      "title": "Level 13 \u2014 Mastery & Endurance",
+      "level": "Mastery & Endurance",
+      "lessonCount": 25,
+      "firstId": 176,
+      "lastId": 200
+    }
+  ]
+}
