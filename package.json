@@ -1,18 +1,17 @@
 {
   "name": "typing-master",
   "version": "1.0.0",
-  "description": "Typing Master - Build Speed. Build Accuracy. Build Muscle Memory.",
+  "description": "𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑 - Build Speed. Build Accuracy. Build Muscle Memory.",
   "main": "electron/main.js",
-  "author": "Typing Master",
+  "author": "𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build:win": "electron-builder --win --x64 --publish never",
-    "build:linux": "electron-builder --linux --publish never"
+    "build:win": "electron-builder --win --x64 --publish never"
   },
   "build": {
     "appId": "com.typingmaster.app",
-    "productName": "Typing Master",
+    "productName": "𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑",
     "directories": {
       "output": "release"
     },
@@ -21,7 +20,10 @@
       "app/**/*"
     ],
     "win": {
-      "target": ["nsis", "portable"],
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "app/icons/icon-512.png"
     },
     "nsis": {
@@ -29,11 +31,7 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Typing Master"
-    },
-    "linux": {
-      "target": ["AppImage"],
-      "category": "Education"
+      "shortcutName": "𝐓𝐘𝐏𝐈𝐍𝐆 • 𝐌𝐀𝐒𝐓𝐄𝐑"
     },
     "publish": null
   },
