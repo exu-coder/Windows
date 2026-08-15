@@ -1,15 +1,20 @@
 name: Build Typing Master
 
 on:
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -23,14 +28,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: release/*
+          path: release/*.*
 
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -44,4 +51,52 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-build
-          path: release/*
+          path: release/*.AppImage
+
+  release:
+    needs: [build-windows, build-linux]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download Windows
+        uses: actions/download-artifact@v4
+        with:
+          name: windows-build
+          path: dist-windows
+
+      - name: Download Linux
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-build
+          path: dist-linux
+
+      - name: Create Tag (if manual run)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          TAG="v1.0.${{ github.run_number }}"
+          git tag "$TAG"
+          git push origin "$TAG"
+          echo "RELEASE_TAG=$TAG" >> $GITHUB_ENV
+
+      - name: Set Tag (if tag push)
+        if: github.event_name == 'push'
+        run: echo "RELEASE_TAG=${{ github.ref_name }}" >> $GITHUB_ENV
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          files: |
+            dist-windows/*
+            dist-linux/*
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
