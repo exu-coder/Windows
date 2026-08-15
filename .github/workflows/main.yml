@@ -1,20 +1,15 @@
 name: Build Typing Master
 
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -22,22 +17,22 @@ jobs:
         run: npm install
 
       - name: Build Windows
-        run: npm run build:win
+        run: npm run build:win -- --publish never
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: release/*.*
+          path: release/*
 
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -45,13 +40,15 @@ jobs:
         run: npm install
 
       - name: Build Linux
-        run: npm run build:linux
+        run: npm run build:linux -- --publish never
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Linux artifacts
         uses: actions/upload-artifact@v4
         with:
           name: linux-build
-          path: release/*.AppImage
+          path: release/*
 
   release:
     needs: [build-windows, build-linux]
@@ -74,6 +71,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: v1.0.0
+          name: Typing Master v1.0.0
           files: |
             dist-windows/*
             dist-linux/*
