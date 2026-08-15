@@ -1,6 +1,6 @@
 {
   "part": 12,
-  "title": "Level 12 — Professional Text",
+  "title": "Level 12 \u2014 Professional Text",
   "level": "Professional Text",
   "lessonCount": 25,
   "lessons": [
@@ -8,7 +8,7 @@
       "id": 151,
       "number": 151,
       "title": "Business Writing 1",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -19,11 +19,7 @@
           "type": "sentence"
         },
         {
-          "text": "Please find the attached report for your review. The quarterly results exceeded our initial expectations.",
-          "type": "sentence"
-        },
-        {
-          "text": "Please find the attached report for your review and follow up as needed.",
+          "text": "Please find the attached report for your review. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -37,7 +33,7 @@
       "id": 152,
       "number": 152,
       "title": "Business Writing 2",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -48,11 +44,7 @@
           "type": "sentence"
         },
         {
-          "text": "I look forward to meeting you next Tuesday afternoon. We appreciate your continued support and partnership.",
-          "type": "sentence"
-        },
-        {
-          "text": "I look forward to meeting you next Tuesday afternoon and follow up as needed.",
+          "text": "I look forward to meeting you next Tuesday afternoon. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -66,7 +58,7 @@
       "id": 153,
       "number": 153,
       "title": "Business Writing 3",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -77,11 +69,7 @@
           "type": "sentence"
         },
         {
-          "text": "Kindly confirm your availability at the earliest convenience. Let me know if you need any further clarification.",
-          "type": "sentence"
-        },
-        {
-          "text": "Kindly confirm your availability at the earliest convenience and follow up as needed.",
+          "text": "Kindly confirm your availability at the earliest convenience. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -95,7 +83,7 @@
       "id": 154,
       "number": 154,
       "title": "Business Writing 4",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -106,11 +94,7 @@
           "type": "sentence"
         },
         {
-          "text": "The quarterly results exceeded our initial expectations. The deadline for submission is Friday at five o'clock.",
-          "type": "sentence"
-        },
-        {
-          "text": "The quarterly results exceeded our initial expectations and follow up as needed.",
+          "text": "The quarterly results exceeded our initial expectations. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -124,7 +108,7 @@
       "id": 155,
       "number": 155,
       "title": "Business Writing 5",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -135,11 +119,7 @@
           "type": "sentence"
         },
         {
-          "text": "We appreciate your continued support and partnership. Our team will follow up with the necessary documents.",
-          "type": "sentence"
-        },
-        {
-          "text": "We appreciate your continued support and partnership and follow up as needed.",
+          "text": "We appreciate your continued support and partnership. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -153,7 +133,7 @@
       "id": 156,
       "number": 156,
       "title": "Business Writing 6",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -164,11 +144,7 @@
           "type": "sentence"
         },
         {
-          "text": "Let me know if you need any further clarification. Thank you for your prompt attention to this matter.",
-          "type": "sentence"
-        },
-        {
-          "text": "Let me know if you need any further clarification and follow up as needed.",
+          "text": "Let me know if you need any further clarification. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -182,7 +158,7 @@
       "id": 157,
       "number": 157,
       "title": "Business Writing 7",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -193,11 +169,7 @@
           "type": "sentence"
         },
         {
-          "text": "The deadline for submission is Friday at five o'clock. Please do not hesitate to contact us with questions.",
-          "type": "sentence"
-        },
-        {
-          "text": "The deadline for submission is Friday at five o'clock and follow up as needed.",
+          "text": "The deadline for submission is Friday at five o'clock. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -211,7 +183,7 @@
       "id": 158,
       "number": 158,
       "title": "Business Writing 8",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -222,11 +194,7 @@
           "type": "sentence"
         },
         {
-          "text": "Our team will follow up with the necessary documents. The project timeline has been updated accordingly.",
-          "type": "sentence"
-        },
-        {
-          "text": "Our team will follow up with the necessary documents and follow up as needed.",
+          "text": "Our team will follow up with the necessary documents. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -240,7 +208,7 @@
       "id": 159,
       "number": 159,
       "title": "Business Writing 9",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -251,11 +219,7 @@
           "type": "sentence"
         },
         {
-          "text": "Thank you for your prompt attention to this matter. We are pleased to announce the successful launch.",
-          "type": "sentence"
-        },
-        {
-          "text": "Thank you for your prompt attention to this matter and follow up as needed.",
+          "text": "Thank you for your prompt attention to this matter. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -269,7 +233,7 @@
       "id": 160,
       "number": 160,
       "title": "Business Writing 10",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -280,11 +244,7 @@
           "type": "sentence"
         },
         {
-          "text": "Please do not hesitate to contact us with questions. Your feedback is valuable and helps us improve.",
-          "type": "sentence"
-        },
-        {
-          "text": "Please do not hesitate to contact us with questions and follow up as needed.",
+          "text": "Please do not hesitate to contact us with questions. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -298,7 +258,7 @@
       "id": 161,
       "number": 161,
       "title": "Business Writing 11",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -309,11 +269,7 @@
           "type": "sentence"
         },
         {
-          "text": "The project timeline has been updated accordingly. The meeting has been rescheduled to next Monday.",
-          "type": "sentence"
-        },
-        {
-          "text": "The project timeline has been updated accordingly and follow up as needed.",
+          "text": "The project timeline has been updated accordingly. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -327,7 +283,7 @@
       "id": 162,
       "number": 162,
       "title": "Business Writing 12",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -338,11 +294,7 @@
           "type": "sentence"
         },
         {
-          "text": "We are pleased to announce the successful launch. All stakeholders will receive a summary shortly.",
-          "type": "sentence"
-        },
-        {
-          "text": "We are pleased to announce the successful launch and follow up as needed.",
+          "text": "We are pleased to announce the successful launch. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -356,7 +308,7 @@
       "id": 163,
       "number": 163,
       "title": "Business Writing 13",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -367,11 +319,7 @@
           "type": "sentence"
         },
         {
-          "text": "Your feedback is valuable and helps us improve. This proposal outlines the recommended approach.",
-          "type": "sentence"
-        },
-        {
-          "text": "Your feedback is valuable and helps us improve and follow up as needed.",
+          "text": "Your feedback is valuable and helps us improve. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -385,7 +333,7 @@
       "id": 164,
       "number": 164,
       "title": "Business Writing 14",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -396,11 +344,7 @@
           "type": "sentence"
         },
         {
-          "text": "The meeting has been rescheduled to next Monday. We remain committed to delivering quality results.",
-          "type": "sentence"
-        },
-        {
-          "text": "The meeting has been rescheduled to next Monday and follow up as needed.",
+          "text": "The meeting has been rescheduled to next Monday. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -414,7 +358,7 @@
       "id": 165,
       "number": 165,
       "title": "Business Writing 15",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -425,11 +369,7 @@
           "type": "sentence"
         },
         {
-          "text": "All stakeholders will receive a summary shortly. Please review the contract terms carefully.",
-          "type": "sentence"
-        },
-        {
-          "text": "All stakeholders will receive a summary shortly and follow up as needed.",
+          "text": "All stakeholders will receive a summary shortly. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -443,7 +383,7 @@
       "id": 166,
       "number": 166,
       "title": "Business Writing 16",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -454,11 +394,7 @@
           "type": "sentence"
         },
         {
-          "text": "This proposal outlines the recommended approach. The budget allocation requires final approval.",
-          "type": "sentence"
-        },
-        {
-          "text": "This proposal outlines the recommended approach and follow up as needed.",
+          "text": "This proposal outlines the recommended approach. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -472,7 +408,7 @@
       "id": 167,
       "number": 167,
       "title": "Business Writing 17",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -483,11 +419,7 @@
           "type": "sentence"
         },
         {
-          "text": "We remain committed to delivering quality results. Our customer satisfaction scores continue to rise.",
-          "type": "sentence"
-        },
-        {
-          "text": "We remain committed to delivering quality results and follow up as needed.",
+          "text": "We remain committed to delivering quality results. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -501,7 +433,7 @@
       "id": 168,
       "number": 168,
       "title": "Business Writing 18",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -512,11 +444,7 @@
           "type": "sentence"
         },
         {
-          "text": "Please review the contract terms carefully. Implementation will begin in the coming weeks.",
-          "type": "sentence"
-        },
-        {
-          "text": "Please review the contract terms carefully and follow up as needed.",
+          "text": "Please review the contract terms carefully. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -530,7 +458,7 @@
       "id": 169,
       "number": 169,
       "title": "Business Writing 19",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -541,11 +469,7 @@
           "type": "sentence"
         },
         {
-          "text": "The budget allocation requires final approval. Training sessions are available for all staff members.",
-          "type": "sentence"
-        },
-        {
-          "text": "The budget allocation requires final approval and follow up as needed.",
+          "text": "The budget allocation requires final approval. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -559,7 +483,7 @@
       "id": 170,
       "number": 170,
       "title": "Business Writing 20",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -570,11 +494,7 @@
           "type": "sentence"
         },
         {
-          "text": "Our customer satisfaction scores continue to rise. The new policy takes effect at the start of next month.",
-          "type": "sentence"
-        },
-        {
-          "text": "Our customer satisfaction scores continue to rise and follow up as needed.",
+          "text": "Our customer satisfaction scores continue to rise. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -588,7 +508,7 @@
       "id": 171,
       "number": 171,
       "title": "Business Writing 21",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -599,11 +519,7 @@
           "type": "sentence"
         },
         {
-          "text": "Implementation will begin in the coming weeks. We value transparency and open communication.",
-          "type": "sentence"
-        },
-        {
-          "text": "Implementation will begin in the coming weeks and follow up as needed.",
+          "text": "Implementation will begin in the coming weeks. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -617,7 +533,7 @@
       "id": 172,
       "number": 172,
       "title": "Business Writing 22",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -628,11 +544,7 @@
           "type": "sentence"
         },
         {
-          "text": "Training sessions are available for all staff members. Looking forward to a productive collaboration.",
-          "type": "sentence"
-        },
-        {
-          "text": "Training sessions are available for all staff members and follow up as needed.",
+          "text": "Training sessions are available for all staff members. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -646,7 +558,7 @@
       "id": 173,
       "number": 173,
       "title": "Business Writing 23",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -657,11 +569,7 @@
           "type": "sentence"
         },
         {
-          "text": "The new policy takes effect at the start of next month. Please find the attached report for your review.",
-          "type": "sentence"
-        },
-        {
-          "text": "The new policy takes effect at the start of next month and follow up as needed.",
+          "text": "The new policy takes effect at the start of next month. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -675,7 +583,7 @@
       "id": 174,
       "number": 174,
       "title": "Business Writing 24",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -686,11 +594,7 @@
           "type": "sentence"
         },
         {
-          "text": "We value transparency and open communication. I look forward to meeting you next Tuesday afternoon.",
-          "type": "sentence"
-        },
-        {
-          "text": "We value transparency and open communication and follow up as needed.",
+          "text": "We value transparency and open communication. Please reply when convenient.",
           "type": "sentence"
         }
       ],
@@ -704,7 +608,7 @@
       "id": 175,
       "number": 175,
       "title": "Business Writing 25",
-      "description": "Practice professional email and business language. Focus on capitalization, punctuation, and flow.",
+      "description": "Practice professional email and business language with proper punctuation.",
       "level": "Professional Text",
       "difficulty": 9,
       "targetKeys": [],
@@ -715,11 +619,7 @@
           "type": "sentence"
         },
         {
-          "text": "Looking forward to a productive collaboration. Kindly confirm your availability at the earliest convenience.",
-          "type": "sentence"
-        },
-        {
-          "text": "Looking forward to a productive collaboration and follow up as needed.",
+          "text": "Looking forward to a productive collaboration. Please reply when convenient.",
           "type": "sentence"
         }
       ],
