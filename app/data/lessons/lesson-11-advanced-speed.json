@@ -1,27 +1,17 @@
 {
   "part": 11,
-  "title": "Level 11 — Advanced Speed",
+  "title": "Level 11 \u2014 Advanced Speed",
   "level": "Advanced Speed",
   "lessonCount": 25,
   "lessons": [
     {
       "id": 126,
       "number": 126,
-      "title": "Speed Drill 1: Common bigrams speed",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 1",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "i",
-        "o",
-        "h",
-        "t",
-        "n",
-        "e",
-        "a",
-        "d",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -30,10 +20,6 @@
         },
         {
           "text": "th he in er an re on at en nd th he in er an re on at en nd",
-          "type": "drill"
-        },
-        {
-          "text": "th he in er an re on at en nd dn ne ta no er na re ni eh ht",
           "type": "drill"
         }
       ],
@@ -46,28 +32,11 @@
     {
       "id": 127,
       "number": 127,
-      "title": "Speed Drill 2: High frequency words",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 2",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "n",
-        "e",
-        "m",
-        "v",
-        "s",
-        "u",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -76,10 +45,6 @@
         },
         {
           "text": "the and for you that with this from have they the and for you that with this from have they",
-          "type": "drill"
-        },
-        {
-          "text": "the and for you that with this from have they",
           "type": "drill"
         }
       ],
@@ -92,32 +57,11 @@
     {
       "id": 128,
       "number": 128,
-      "title": "Speed Drill 3: Classic pangram fragments",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 3",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "i",
-        "e",
-        "v",
-        "p",
-        "o",
-        "n",
-        "l",
-        "m",
-        "z",
-        "s",
-        "u",
-        "q",
-        "j",
-        "y",
-        "k",
-        "c",
-        "b",
-        "a",
-        "w",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -126,10 +70,6 @@
         },
         {
           "text": "quick brown jumps over lazy quick brown jumps over lazy",
-          "type": "drill"
-        },
-        {
-          "text": "quick brown jumps over lazy yzal revo spmuj nworb kciuq",
           "type": "drill"
         }
       ],
@@ -142,27 +82,11 @@
     {
       "id": 129,
       "number": 129,
-      "title": "Speed Drill 4: Motivation phrases",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 4",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "i",
-        "y",
-        "o",
-        "t",
-        "k",
-        "c",
-        "e",
-        "m",
-        "g",
-        "v",
-        "p",
-        "s",
-        "a",
-        "d",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -171,10 +95,6 @@
         },
         {
           "text": "practice makes progress every day practice makes progress every day",
-          "type": "drill"
-        },
-        {
-          "text": "practice makes progress every day yad yreve ssergorp sekam ecitcarp",
           "type": "drill"
         }
       ],
@@ -187,29 +107,11 @@
     {
       "id": 130,
       "number": 130,
-      "title": "Speed Drill 5: Typing principle",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 5",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "n",
-        "c",
-        "e",
-        "l",
-        "p",
-        "s",
-        "u",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -218,10 +120,6 @@
         },
         {
           "text": "accuracy first then speed follows accuracy first then speed follows",
-          "type": "drill"
-        },
-        {
-          "text": "accuracy first then speed follows swollof deeps neht tsrif ycarucca",
           "type": "drill"
         }
       ],
@@ -234,29 +132,11 @@
     {
       "id": 131,
       "number": 131,
-      "title": "Speed Drill 6: Technique reminder",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 6",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "f",
-        "i",
-        "p",
-        "y",
-        "o",
-        "h",
-        "n",
-        "t",
-        "e",
-        "m",
-        "l",
-        "c",
-        "g",
-        "s",
-        "a",
-        "w",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -265,10 +145,6 @@
         },
         {
           "text": "home row fingers stay in place home row fingers stay in place",
-          "type": "drill"
-        },
-        {
-          "text": "home row fingers stay in place ecalp ni yats sregnif wor emoh",
           "type": "drill"
         }
       ],
@@ -281,38 +157,19 @@
     {
       "id": 132,
       "number": 132,
-      "title": "Speed Drill 7: Shift technique",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 7",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "k",
-        "n",
-        "e",
-        "p",
-        "s",
-        "a",
-        "d",
-        "w"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
-          "text": "shift key with opposite hand shift key with opposite hand shift key with opposite hand shift key with opposite hand",
+          "text": "shift key with opposite hand always shift key with opposite hand always shift key with opposite hand always shift key with opposite hand always",
           "type": "drill"
         },
         {
-          "text": "shift key with opposite hand shift key with opposite hand",
-          "type": "drill"
-        },
-        {
-          "text": "shift key with opposite hand dnah etisoppo htiw yek tfihs",
+          "text": "shift key with opposite hand always shift key with opposite hand always",
           "type": "drill"
         }
       ],
@@ -325,38 +182,19 @@
     {
       "id": 133,
       "number": 133,
-      "title": "Speed Drill 8: Mixed content",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 8",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "i",
-        "y",
-        "o",
-        "n",
-        "e",
-        "m",
-        "l",
-        "b",
-        "s",
-        "u",
-        "a",
-        "d",
-        "x",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
-          "text": "numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in",
+          "text": "numbers and symbols mixed together numbers and symbols mixed together numbers and symbols mixed together numbers and symbols mixed together",
           "type": "drill"
         },
         {
-          "text": "numbers and symbols mixed in numbers and symbols mixed in",
-          "type": "drill"
-        },
-        {
-          "text": "numbers and symbols mixed in ni dexim slobmys dna srebmun",
+          "text": "numbers and symbols mixed together numbers and symbols mixed together",
           "type": "drill"
         }
       ],
@@ -369,38 +207,19 @@
     {
       "id": 134,
       "number": 134,
-      "title": "Speed Drill 9: Practical patterns",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 9",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "i",
-        "o",
-        "n",
-        "h",
-        "e",
-        "m",
-        "l",
-        "b",
-        "p",
-        "s",
-        "u",
-        "a",
-        "d",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
-          "text": "email address and phone number email address and phone number email address and phone number email address and phone number",
+          "text": "email address and phone number test email address and phone number test email address and phone number test email address and phone number test",
           "type": "drill"
         },
         {
-          "text": "email address and phone number email address and phone number email address and phone number",
-          "type": "drill"
-        },
-        {
-          "text": "email address and phone number rebmun enohp dna sserdda liame",
+          "text": "email address and phone number test email address and phone number test",
           "type": "drill"
         }
       ],
@@ -413,38 +232,11 @@
     {
       "id": 135,
       "number": 135,
-      "title": "Speed Drill 10: Full pangram",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 10",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
       "difficulty": 8,
-      "targetKeys": [
-        "i",
-        "e",
-        "v",
-        "p",
-        "g",
-        "f",
-        "o",
-        "h",
-        "n",
-        "l",
-        "m",
-        "z",
-        "s",
-        "u",
-        "q",
-        "t",
-        "j",
-        "x",
-        "y",
-        "k",
-        "c",
-        "b",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -452,11 +244,7 @@
           "type": "drill"
         },
         {
-          "text": "the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog",
-          "type": "drill"
-        },
-        {
-          "text": "the quick brown fox jumps over the lazy dog",
+          "text": "the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog",
           "type": "drill"
         }
       ],
@@ -469,21 +257,11 @@
     {
       "id": 136,
       "number": 136,
-      "title": "Speed Drill 11: Common bigrams speed",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 11",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "i",
-        "o",
-        "h",
-        "t",
-        "n",
-        "e",
-        "a",
-        "d",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -491,11 +269,7 @@
           "type": "drill"
         },
         {
-          "text": "th he in er an re on at en nd th he in er an re on at en nd th he in er an re on at en nd",
-          "type": "drill"
-        },
-        {
-          "text": "th he in er an re on at en nd dn ne ta no er na re ni eh ht",
+          "text": "th he in er an re on at en nd th he in er an re on at en nd",
           "type": "drill"
         }
       ],
@@ -508,28 +282,11 @@
     {
       "id": 137,
       "number": 137,
-      "title": "Speed Drill 12: High frequency words",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 12",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "n",
-        "e",
-        "m",
-        "v",
-        "s",
-        "u",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -537,11 +294,7 @@
           "type": "drill"
         },
         {
-          "text": "the and for you that with this from have they the and for you that with this from have they the and for you that with this from have they",
-          "type": "drill"
-        },
-        {
-          "text": "the and for you that with this from have they",
+          "text": "the and for you that with this from have they the and for you that with this from have they",
           "type": "drill"
         }
       ],
@@ -554,32 +307,11 @@
     {
       "id": 138,
       "number": 138,
-      "title": "Speed Drill 13: Classic pangram fragments",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 13",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "i",
-        "e",
-        "v",
-        "p",
-        "o",
-        "n",
-        "l",
-        "m",
-        "z",
-        "s",
-        "u",
-        "q",
-        "j",
-        "y",
-        "k",
-        "c",
-        "b",
-        "a",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -587,11 +319,7 @@
           "type": "drill"
         },
         {
-          "text": "quick brown jumps over lazy quick brown jumps over lazy quick brown jumps over lazy",
-          "type": "drill"
-        },
-        {
-          "text": "quick brown jumps over lazy yzal revo spmuj nworb kciuq",
+          "text": "quick brown jumps over lazy quick brown jumps over lazy",
           "type": "drill"
         }
       ],
@@ -604,27 +332,11 @@
     {
       "id": 139,
       "number": 139,
-      "title": "Speed Drill 14: Motivation phrases",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 14",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "i",
-        "y",
-        "o",
-        "t",
-        "k",
-        "c",
-        "e",
-        "m",
-        "g",
-        "v",
-        "p",
-        "s",
-        "a",
-        "d",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -632,11 +344,7 @@
           "type": "drill"
         },
         {
-          "text": "practice makes progress every day practice makes progress every day practice makes progress every day",
-          "type": "drill"
-        },
-        {
-          "text": "practice makes progress every day yad yreve ssergorp sekam ecitcarp",
+          "text": "practice makes progress every day practice makes progress every day",
           "type": "drill"
         }
       ],
@@ -649,29 +357,11 @@
     {
       "id": 140,
       "number": 140,
-      "title": "Speed Drill 15: Typing principle",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 15",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "n",
-        "c",
-        "e",
-        "l",
-        "p",
-        "s",
-        "u",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -679,11 +369,7 @@
           "type": "drill"
         },
         {
-          "text": "accuracy first then speed follows accuracy first then speed follows accuracy first then speed follows",
-          "type": "drill"
-        },
-        {
-          "text": "accuracy first then speed follows swollof deeps neht tsrif ycarucca",
+          "text": "accuracy first then speed follows accuracy first then speed follows",
           "type": "drill"
         }
       ],
@@ -696,29 +382,11 @@
     {
       "id": 141,
       "number": 141,
-      "title": "Speed Drill 16: Technique reminder",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 16",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "f",
-        "i",
-        "p",
-        "y",
-        "o",
-        "h",
-        "n",
-        "t",
-        "e",
-        "m",
-        "l",
-        "c",
-        "g",
-        "s",
-        "a",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -726,11 +394,7 @@
           "type": "drill"
         },
         {
-          "text": "home row fingers stay in place home row fingers stay in place home row fingers stay in place",
-          "type": "drill"
-        },
-        {
-          "text": "home row fingers stay in place ecalp ni yats sregnif wor emoh",
+          "text": "home row fingers stay in place home row fingers stay in place",
           "type": "drill"
         }
       ],
@@ -743,38 +407,19 @@
     {
       "id": 142,
       "number": 142,
-      "title": "Speed Drill 17: Shift technique",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 17",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "k",
-        "n",
-        "e",
-        "p",
-        "s",
-        "a",
-        "d",
-        "w"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
-          "text": "shift key with opposite hand shift key with opposite hand shift key with opposite hand shift key with opposite hand shift key with opposite hand shift key with opposite hand",
+          "text": "shift key with opposite hand always shift key with opposite hand always shift key with opposite hand always shift key with opposite hand always shift key with opposite hand always shift key with opposite hand always",
           "type": "drill"
         },
         {
-          "text": "shift key with opposite hand shift key with opposite hand shift key with opposite hand shift key with opposite hand",
-          "type": "drill"
-        },
-        {
-          "text": "shift key with opposite hand dnah etisoppo htiw yek tfihs",
+          "text": "shift key with opposite hand always shift key with opposite hand always",
           "type": "drill"
         }
       ],
@@ -787,38 +432,19 @@
     {
       "id": 143,
       "number": 143,
-      "title": "Speed Drill 18: Mixed content",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 18",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "i",
-        "y",
-        "o",
-        "n",
-        "e",
-        "m",
-        "l",
-        "b",
-        "s",
-        "u",
-        "a",
-        "d",
-        "x",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
-          "text": "numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in",
+          "text": "numbers and symbols mixed together numbers and symbols mixed together numbers and symbols mixed together numbers and symbols mixed together numbers and symbols mixed together numbers and symbols mixed together",
           "type": "drill"
         },
         {
-          "text": "numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in numbers and symbols mixed in",
-          "type": "drill"
-        },
-        {
-          "text": "numbers and symbols mixed in ni dexim slobmys dna srebmun",
+          "text": "numbers and symbols mixed together numbers and symbols mixed together",
           "type": "drill"
         }
       ],
@@ -831,38 +457,19 @@
     {
       "id": 144,
       "number": 144,
-      "title": "Speed Drill 19: Practical patterns",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 19",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "i",
-        "o",
-        "n",
-        "h",
-        "e",
-        "m",
-        "l",
-        "b",
-        "p",
-        "s",
-        "u",
-        "a",
-        "d",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
-          "text": "email address and phone number email address and phone number email address and phone number email address and phone number email address and phone number email address and phone number",
+          "text": "email address and phone number test email address and phone number test email address and phone number test email address and phone number test email address and phone number test email address and phone number test",
           "type": "drill"
         },
         {
-          "text": "email address and phone number email address and phone number email address and phone number email address and phone number",
-          "type": "drill"
-        },
-        {
-          "text": "email address and phone number rebmun enohp dna sserdda liame",
+          "text": "email address and phone number test email address and phone number test",
           "type": "drill"
         }
       ],
@@ -875,38 +482,11 @@
     {
       "id": 145,
       "number": 145,
-      "title": "Speed Drill 20: Full pangram",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 20",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 9,
-      "targetKeys": [
-        "i",
-        "e",
-        "v",
-        "p",
-        "g",
-        "f",
-        "o",
-        "h",
-        "n",
-        "l",
-        "m",
-        "z",
-        "s",
-        "u",
-        "q",
-        "t",
-        "j",
-        "x",
-        "y",
-        "k",
-        "c",
-        "b",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -914,11 +494,7 @@
           "type": "drill"
         },
         {
-          "text": "the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog",
-          "type": "drill"
-        },
-        {
-          "text": "the quick brown fox jumps over the lazy dog",
+          "text": "the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog",
           "type": "drill"
         }
       ],
@@ -931,21 +507,11 @@
     {
       "id": 146,
       "number": 146,
-      "title": "Speed Drill 21: Common bigrams speed",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 21",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 10,
-      "targetKeys": [
-        "i",
-        "o",
-        "h",
-        "t",
-        "n",
-        "e",
-        "a",
-        "d",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -953,11 +519,7 @@
           "type": "drill"
         },
         {
-          "text": "th he in er an re on at en nd th he in er an re on at en nd th he in er an re on at en nd th he in er an re on at en nd",
-          "type": "drill"
-        },
-        {
-          "text": "th he in er an re on at en nd dn ne ta no er na re ni eh ht",
+          "text": "th he in er an re on at en nd th he in er an re on at en nd",
           "type": "drill"
         }
       ],
@@ -970,28 +532,11 @@
     {
       "id": 147,
       "number": 147,
-      "title": "Speed Drill 22: High frequency words",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 22",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 10,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "n",
-        "e",
-        "m",
-        "v",
-        "s",
-        "u",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -999,11 +544,7 @@
           "type": "drill"
         },
         {
-          "text": "the and for you that with this from have they the and for you that with this from have they the and for you that with this from have they the and for you that with this from have they",
-          "type": "drill"
-        },
-        {
-          "text": "the and for you that with this from have they",
+          "text": "the and for you that with this from have they the and for you that with this from have they",
           "type": "drill"
         }
       ],
@@ -1016,32 +557,11 @@
     {
       "id": 148,
       "number": 148,
-      "title": "Speed Drill 23: Classic pangram fragments",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 23",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 10,
-      "targetKeys": [
-        "i",
-        "e",
-        "v",
-        "p",
-        "o",
-        "n",
-        "l",
-        "m",
-        "z",
-        "s",
-        "u",
-        "q",
-        "j",
-        "y",
-        "k",
-        "c",
-        "b",
-        "a",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -1049,11 +569,7 @@
           "type": "drill"
         },
         {
-          "text": "quick brown jumps over lazy quick brown jumps over lazy quick brown jumps over lazy quick brown jumps over lazy",
-          "type": "drill"
-        },
-        {
-          "text": "quick brown jumps over lazy yzal revo spmuj nworb kciuq",
+          "text": "quick brown jumps over lazy quick brown jumps over lazy",
           "type": "drill"
         }
       ],
@@ -1066,27 +582,11 @@
     {
       "id": 149,
       "number": 149,
-      "title": "Speed Drill 24: Motivation phrases",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 24",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 10,
-      "targetKeys": [
-        "i",
-        "y",
-        "o",
-        "t",
-        "k",
-        "c",
-        "e",
-        "m",
-        "g",
-        "v",
-        "p",
-        "s",
-        "a",
-        "d",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -1094,11 +594,7 @@
           "type": "drill"
         },
         {
-          "text": "practice makes progress every day practice makes progress every day practice makes progress every day practice makes progress every day",
-          "type": "drill"
-        },
-        {
-          "text": "practice makes progress every day yad yreve ssergorp sekam ecitcarp",
+          "text": "practice makes progress every day practice makes progress every day",
           "type": "drill"
         }
       ],
@@ -1111,29 +607,11 @@
     {
       "id": 150,
       "number": 150,
-      "title": "Speed Drill 25: Typing principle",
-      "description": "Focus on smooth rhythm and reducing hesitation. Target higher speed while keeping accuracy.",
+      "title": "Speed Drill 25",
+      "description": "Focus on smooth rhythm and higher speed while keeping accuracy high.",
       "level": "Advanced Speed",
-      "difficulty": 10,
-      "targetKeys": [
-        "f",
-        "i",
-        "y",
-        "o",
-        "h",
-        "t",
-        "n",
-        "c",
-        "e",
-        "l",
-        "p",
-        "s",
-        "u",
-        "a",
-        "d",
-        "w",
-        "r"
-      ],
+      "difficulty": 8,
+      "targetKeys": [],
       "targetFingers": [],
       "exercises": [
         {
@@ -1141,11 +619,7 @@
           "type": "drill"
         },
         {
-          "text": "accuracy first then speed follows accuracy first then speed follows accuracy first then speed follows accuracy first then speed follows accuracy first then speed follows",
-          "type": "drill"
-        },
-        {
-          "text": "accuracy first then speed follows swollof deeps neht tsrif ycarucca",
+          "text": "accuracy first then speed follows accuracy first then speed follows",
           "type": "drill"
         }
       ],
