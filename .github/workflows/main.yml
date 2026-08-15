@@ -17,9 +17,7 @@ jobs:
         run: npm install
 
       - name: Build Windows
-        run: npm run build:win -- --publish never
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run build:win
 
       - name: Upload Windows artifacts
         uses: actions/upload-artifact@v4
@@ -40,42 +38,10 @@ jobs:
         run: npm install
 
       - name: Build Linux
-        run: npm run build:linux -- --publish never
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run build:linux
 
       - name: Upload Linux artifacts
         uses: actions/upload-artifact@v4
         with:
           name: linux-build
           path: release/*
-
-  release:
-    needs: [build-windows, build-linux]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Download Windows
-        uses: actions/download-artifact@v4
-        with:
-          name: windows-build
-          path: dist-windows
-
-      - name: Download Linux
-        uses: actions/download-artifact@v4
-        with:
-          name: linux-build
-          path: dist-linux
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v1.0.0
-          name: Typing Master v1.0.0
-          files: |
-            dist-windows/*
-            dist-linux/*
-          generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
