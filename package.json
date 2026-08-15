@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build:win": "electron-builder --win --x64",
-    "build:linux": "electron-builder --linux"
+    "build:win": "electron-builder --win --x64 --publish never",
+    "build:linux": "electron-builder --linux --publish never"
   },
   "build": {
     "appId": "com.typingmaster.app",
@@ -34,7 +34,8 @@
     "linux": {
       "target": ["AppImage"],
       "category": "Education"
-    }
+    },
+    "publish": null
   },
   "devDependencies": {
     "electron": "31.7.7",
