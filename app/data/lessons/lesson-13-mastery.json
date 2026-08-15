@@ -1,0 +1,733 @@
+{
+  "part": 13,
+  "title": "Level 13 — Mastery & Endurance",
+  "level": "Mastery & Endurance",
+  "lessonCount": 25,
+  "lessons": [
+    {
+      "id": 176,
+      "number": 176,
+      "title": "Mastery Endurance 1",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 177,
+      "number": 177,
+      "title": "Mastery Endurance 2",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 178,
+      "number": 178,
+      "title": "Mastery Endurance 3",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed.",
+          "type": "paragraph"
+        },
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed.",
+          "type": "paragraph"
+        },
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 179,
+      "number": 179,
+      "title": "Mastery Endurance 4",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 180,
+      "number": 180,
+      "title": "Mastery Endurance 5",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 181,
+      "number": 181,
+      "title": "Mastery Endurance 6",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 182,
+      "number": 182,
+      "title": "Mastery Endurance 7",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 183,
+      "number": 183,
+      "title": "Mastery Endurance 8",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 184,
+      "number": 184,
+      "title": "Mastery Endurance 9",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 185,
+      "number": 185,
+      "title": "Mastery Endurance 10",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 186,
+      "number": 186,
+      "title": "Mastery Endurance 11",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times. Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 187,
+      "number": 187,
+      "title": "Mastery Endurance 12",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions. Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 188,
+      "number": 188,
+      "title": "Mastery Endurance 13",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed.",
+          "type": "paragraph"
+        },
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed. When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed.",
+          "type": "paragraph"
+        },
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 189,
+      "number": 189,
+      "title": "Mastery Endurance 14",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring. Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 190,
+      "number": 190,
+      "title": "Mastery Endurance 15",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused. Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 191,
+      "number": 191,
+      "title": "Mastery Endurance 16",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm. The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm.",
+          "type": "paragraph"
+        },
+        {
+          "text": "The best typists are not always the fastest in short bursts. They maintain high accuracy over long periods and recover quickly from mistakes without breaking rhythm. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 192,
+      "number": 192,
+      "title": "Mastery Endurance 17",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position. Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Numbers and symbols appear frequently in real work. Treat the number row with the same respect as letters. Reach with the correct finger and return to home position. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 193,
+      "number": 193,
+      "title": "Mastery Endurance 18",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both. Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Capital letters require coordination between the letter finger and the opposite shift key. Practice this pairing until it feels automatic. Avoid using the same hand for both. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 194,
+      "number": 194,
+      "title": "Mastery Endurance 19",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation. Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Reading ahead while typing is a hallmark of advanced skill. Your eyes stay a few words in front of your fingers, allowing a continuous flow of text without hesitation. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 195,
+      "number": 195,
+      "title": "Mastery Endurance 20",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions. Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Every practice session is a chance to reinforce good habits. Even ten focused minutes daily produces better results than occasional long, unfocused sessions. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 196,
+      "number": 196,
+      "title": "Mastery Endurance 21",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times. Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times. Touch typing is a sk",
+          "type": "paragraph"
+        },
+        {
+          "text": "Touch typing is a skill that rewards consistent practice. The more you type with correct technique, the more natural it becomes. Speed is the result of accuracy repeated thousands of times. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 197,
+      "number": 197,
+      "title": "Mastery Endurance 22",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions. Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions. Professional typists maintain good",
+          "type": "paragraph"
+        },
+        {
+          "text": "Professional typists maintain good posture, keep their wrists level, and return fingers to the home row after every keystroke. These habits prevent fatigue and support long sessions. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 198,
+      "number": 198,
+      "title": "Mastery Endurance 23",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed.",
+          "type": "paragraph"
+        },
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed. When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed. When learning difficult combinat",
+          "type": "paragraph"
+        },
+        {
+          "text": "When learning difficult combinations, slow down first. Smooth, deliberate movements build muscle memory faster than rushed mistakes. Accuracy creates the foundation for lasting speed. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 199,
+      "number": 199,
+      "title": "Mastery Endurance 24",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring. Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring. Modern work requires typing across m",
+          "type": "paragraph"
+        },
+        {
+          "text": "Modern work requires typing across many contexts: emails, documents, chat messages, code, and data entry. A strong typing foundation makes all of these tasks easier and less tiring. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    },
+    {
+      "id": 200,
+      "number": 200,
+      "title": "Mastery Endurance 25",
+      "description": "Longer passages for building stamina, consistency, and real-world typing flow.",
+      "level": "Mastery & Endurance",
+      "difficulty": 10,
+      "targetKeys": [],
+      "targetFingers": [],
+      "exercises": [
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused.",
+          "type": "paragraph"
+        },
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused. Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused. Endurance comes from relaxed shoulders, steady breathing, an",
+          "type": "paragraph"
+        },
+        {
+          "text": "Endurance comes from relaxed shoulders, steady breathing, and regular short breaks. Pushing through tension often leads to errors and discomfort. Stay loose and focused. Keep your eyes on the screen and trust your fingers.",
+          "type": "paragraph"
+        }
+      ],
+      "requirements": {
+        "accuracy": 95,
+        "minRepetitions": 1,
+        "targetWpm": 50
+      }
+    }
+  ]
+}
